@@ -2,4 +2,4 @@
 
 
 This is an ICT project of Lahti University of Applied Science which is focusing on application programming.
-This software will help restaurants to make reservations for customers. The application also helps in managing roles deliver to the employees which will be taken part in the reservation process (cooking, cleaning table, etc..). 
+This software will help every service company to reserve schedule and manage employee work flow according to the services.
