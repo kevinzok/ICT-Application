@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
     static class Program
-    {
+    {        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false);            
             Application.Run(new Reservation());
         }
     }
