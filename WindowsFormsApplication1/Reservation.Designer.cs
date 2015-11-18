@@ -41,8 +41,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabSchedule = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbBoxScheduleView = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.tabEmployees = new System.Windows.Forms.TabPage();
             this.bttnDeleteEmployees = new System.Windows.Forms.Button();
@@ -79,19 +83,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbBoxScheduleView = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbBoxEmployee = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage.SuspendLayout();
             this.tabSchedule.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabEmployees.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabServices.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -210,20 +210,61 @@
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // cbBoxEmployee
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(240, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(168, 290);
-            this.dataGridView1.TabIndex = 2;
+            this.cbBoxEmployee.FormattingEnabled = true;
+            this.cbBoxEmployee.Location = new System.Drawing.Point(18, 105);
+            this.cbBoxEmployee.Name = "cbBoxEmployee";
+            this.cbBoxEmployee.Size = new System.Drawing.Size(121, 21);
+            this.cbBoxEmployee.TabIndex = 6;
+            this.cbBoxEmployee.Text = "--Employee--";
+            this.cbBoxEmployee.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Schedule View";
+            // 
+            // cbBoxScheduleView
+            // 
+            this.cbBoxScheduleView.FormattingEnabled = true;
+            this.cbBoxScheduleView.Location = new System.Drawing.Point(18, 48);
+            this.cbBoxScheduleView.Name = "cbBoxScheduleView";
+            this.cbBoxScheduleView.Size = new System.Drawing.Size(121, 21);
+            this.cbBoxScheduleView.TabIndex = 4;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.monthCalendar1);
+            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Location = new System.Drawing.Point(170, 30);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(464, 331);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.monthCalendar1.Location = new System.Drawing.Point(37, 39);
+            this.monthCalendar1.Location = new System.Drawing.Point(12, 36);
+            this.monthCalendar1.MaximumSize = new System.Drawing.Size(240, 180);
+            this.monthCalendar1.MinimumSize = new System.Drawing.Size(240, 180);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(276, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(168, 290);
+            this.dataGridView1.TabIndex = 2;
             // 
             // button1
             // 
@@ -570,45 +611,6 @@
             this.listBox1.Size = new System.Drawing.Size(133, 264);
             this.listBox1.TabIndex = 0;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.monthCalendar1);
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(170, 30);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(464, 331);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
-            // cbBoxScheduleView
-            // 
-            this.cbBoxScheduleView.FormattingEnabled = true;
-            this.cbBoxScheduleView.Location = new System.Drawing.Point(18, 48);
-            this.cbBoxScheduleView.Name = "cbBoxScheduleView";
-            this.cbBoxScheduleView.Size = new System.Drawing.Size(121, 21);
-            this.cbBoxScheduleView.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 13);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Schedule View";
-            // 
-            // cbBoxEmployee
-            // 
-            this.cbBoxEmployee.FormattingEnabled = true;
-            this.cbBoxEmployee.Location = new System.Drawing.Point(18, 105);
-            this.cbBoxEmployee.Name = "cbBoxEmployee";
-            this.cbBoxEmployee.Size = new System.Drawing.Size(121, 21);
-            this.cbBoxEmployee.TabIndex = 6;
-            this.cbBoxEmployee.Text = "--Employee--";
-            this.cbBoxEmployee.Visible = false;
-            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,6 +629,7 @@
             this.tabPage.ResumeLayout(false);
             this.tabSchedule.ResumeLayout(false);
             this.tabSchedule.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabEmployees.ResumeLayout(false);
             this.tabEmployees.PerformLayout();
@@ -636,7 +639,6 @@
             this.tabServices.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
