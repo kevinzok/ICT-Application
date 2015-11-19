@@ -35,6 +35,8 @@ namespace WindowsFormsApplication1
             string str = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source='.\\Data\\Project3.mdb';Persist Security Info=True";
             myConnection.ConnectionString = str;
             myConnection.Open();
+
+            Change2Employee();
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,15 +56,14 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
+            MakeAppointment formAppointment = new MakeAppointment();
+            formAppointment.Show();
         }
 
         private void ChangeTab(object sender, EventArgs e)
         {
-            if (tabPage.SelectedTab == tabEmployees)
-            {
-                Change2Employee();
-            }
+                        
         }
 
         public void Change2Employee()
