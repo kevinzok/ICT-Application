@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Data.Common;
 
 namespace WindowsFormsApplication1
 {
     public partial class Reservation : Form
     {
+
+        OleDbConnection myConnection = new OleDbConnection();
+        OleDbCommand mySelectComd = new OleDbCommand();
+        DataSet mySet = new DataSet();
+        OleDbDataAdapter myAdapter = new OleDbDataAdapter();
+        OleDbCommand myCommand = new OleDbCommand();
+
         public Reservation()
         {
             InitializeComponent();
@@ -19,12 +28,13 @@ namespace WindowsFormsApplication1
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            string str = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source='.\\Data\\Project3.mdb';Persist Security Info=True";
+            myConnection.ConnectionString = str;
+            myConnection.Open();
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,7 +57,26 @@ namespace WindowsFormsApplication1
           
         }
 
+        private void ChangeTab(object sender, EventArgs e)
+        {
+            if (tabPage.SelectedTab == tabEmployees)
+            {
+                Change2Employee();
+            }
+        }
 
-     
+        public void Change2Employee()
+        {
+            string selectEmployee = "SELECT * FROM Employees";
+            myAdapter.SelectCommand = myCommand;
+            myAdapter.SelectCommand.CommandText = selectEmployee;
+            myAdapter.SelectCommand.Connection = myConnection;
+            myAdapter.Fill(mySet);
+            lboxEmployee.Items.Clear();
+            foreach (DataRow Employee in mySet.Tables[0].Rows)
+            {
+                lboxEmployee.Items.Add(Employee["Name"]);
+            }
+        }
     }
 }

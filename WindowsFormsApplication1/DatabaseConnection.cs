@@ -11,8 +11,5 @@ namespace WindowsFormsApplication1
 {
     class DatabaseConnection
     {
-        OleDbConnection myConnection = new OleDbConnection();
-        string str = "";
-
     }
 }

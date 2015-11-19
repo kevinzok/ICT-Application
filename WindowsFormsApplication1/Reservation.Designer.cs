@@ -190,11 +190,12 @@
             this.tabPage.Controls.Add(this.tabEmployees);
             this.tabPage.Controls.Add(this.tabWorkingField);
             this.tabPage.Controls.Add(this.tabServices);
-            this.tabPage.Location = new System.Drawing.Point(12, 27);
+            this.tabPage.Location = new System.Drawing.Point(11, 27);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
             this.tabPage.Size = new System.Drawing.Size(662, 422);
             this.tabPage.TabIndex = 6;
+            this.tabPage.SelectedIndexChanged += new System.EventHandler(this.ChangeTab);
             // 
             // tabSchedule
             // 
@@ -297,7 +298,7 @@
             this.bttnDeleteEmployees.Location = new System.Drawing.Point(532, 108);
             this.bttnDeleteEmployees.Name = "bttnDeleteEmployees";
             this.bttnDeleteEmployees.Size = new System.Drawing.Size(75, 23);
-            this.bttnDeleteEmployees.TabIndex = 14;
+            this.bttnDeleteEmployees.TabIndex = 9;
             this.bttnDeleteEmployees.Text = "Delete";
             this.bttnDeleteEmployees.UseVisualStyleBackColor = true;
             // 
@@ -337,7 +338,7 @@
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.ReadOnly = true;
             this.txtPosition.Size = new System.Drawing.Size(179, 20);
-            this.txtPosition.TabIndex = 8;
+            this.txtPosition.TabIndex = 3;
             // 
             // lboxWorks
             // 
@@ -345,7 +346,7 @@
             this.lboxWorks.Location = new System.Drawing.Point(136, 179);
             this.lboxWorks.Name = "lboxWorks";
             this.lboxWorks.Size = new System.Drawing.Size(124, 108);
-            this.lboxWorks.TabIndex = 11;
+            this.lboxWorks.TabIndex = 6;
             // 
             // label4
             // 
@@ -362,7 +363,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(179, 20);
-            this.txtPhone.TabIndex = 10;
+            this.txtPhone.TabIndex = 5;
             // 
             // label3
             // 
@@ -388,7 +389,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(179, 20);
-            this.txtAddress.TabIndex = 9;
+            this.txtAddress.TabIndex = 4;
             // 
             // label2
             // 
@@ -423,7 +424,7 @@
             this.txtBirthday.Name = "txtBirthday";
             this.txtBirthday.ReadOnly = true;
             this.txtBirthday.Size = new System.Drawing.Size(179, 20);
-            this.txtBirthday.TabIndex = 7;
+            this.txtBirthday.TabIndex = 2;
             // 
             // txtName
             // 
@@ -431,14 +432,14 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(179, 20);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 1;
             // 
             // bttnEditProfile
             // 
             this.bttnEditProfile.Location = new System.Drawing.Point(532, 75);
             this.bttnEditProfile.Name = "bttnEditProfile";
             this.bttnEditProfile.Size = new System.Drawing.Size(75, 23);
-            this.bttnEditProfile.TabIndex = 3;
+            this.bttnEditProfile.TabIndex = 8;
             this.bttnEditProfile.Text = "Edit Profile";
             this.bttnEditProfile.UseVisualStyleBackColor = true;
             // 
@@ -447,7 +448,7 @@
             this.bttnAddEmployee.Location = new System.Drawing.Point(532, 40);
             this.bttnAddEmployee.Name = "bttnAddEmployee";
             this.bttnAddEmployee.Size = new System.Drawing.Size(75, 23);
-            this.bttnAddEmployee.TabIndex = 2;
+            this.bttnAddEmployee.TabIndex = 7;
             this.bttnAddEmployee.Text = "Add new";
             this.bttnAddEmployee.UseVisualStyleBackColor = true;
             // 
