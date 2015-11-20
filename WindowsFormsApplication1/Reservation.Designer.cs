@@ -210,6 +210,7 @@
             this.tabSchedule.TabIndex = 0;
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.UseVisualStyleBackColor = true;
+            this.tabSchedule.Click += new System.EventHandler(this.tabSchedule_Click);
             // 
             // cbBoxEmployee
             // 
@@ -237,6 +238,8 @@
             this.cbBoxScheduleView.Name = "cbBoxScheduleView";
             this.cbBoxScheduleView.Size = new System.Drawing.Size(121, 21);
             this.cbBoxScheduleView.TabIndex = 4;
+            this.cbBoxScheduleView.Text = "--View--";
+            this.cbBoxScheduleView.SelectedIndexChanged += new System.EventHandler(this.cbBoxScheduleView_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -262,7 +265,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(276, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(264, 18);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(168, 290);
             this.dataGridView1.TabIndex = 2;
@@ -467,7 +470,7 @@
             this.tabWorkingField.Padding = new System.Windows.Forms.Padding(3);
             this.tabWorkingField.Size = new System.Drawing.Size(654, 396);
             this.tabWorkingField.TabIndex = 2;
-            this.tabWorkingField.Text = "Working field";
+            this.tabWorkingField.Text = "Working field / Location";
             this.tabWorkingField.UseVisualStyleBackColor = true;
             // 
             // tabServices

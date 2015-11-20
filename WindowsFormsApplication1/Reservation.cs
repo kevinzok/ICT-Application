@@ -36,6 +36,9 @@ namespace WindowsFormsApplication1
             myConnection.ConnectionString = str;
             myConnection.Open();
 
+            cbBoxScheduleView.Items.Add("Manager View");
+            cbBoxScheduleView.Items.Add("Employee View");
+
             Change2Employee();
         }
 
@@ -55,8 +58,7 @@ namespace WindowsFormsApplication1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        {            
             MakeAppointment formAppointment = new MakeAppointment();
             formAppointment.Show();
         }
@@ -77,6 +79,20 @@ namespace WindowsFormsApplication1
             foreach (DataRow Employee in mySet.Tables[0].Rows)
             {
                 lboxEmployee.Items.Add(Employee["Name"]);
+            }
+        }
+
+        private void tabSchedule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbBoxScheduleView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbBoxScheduleView.SelectedIndex == 1)
+            {
+                cbBoxEmployee.Visible = true;
+
             }
         }
     }

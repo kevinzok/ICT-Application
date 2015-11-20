@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Employee.cs" />
-    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Classes\DatabaseConnection.cs" />
     <Compile Include="MakeAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
