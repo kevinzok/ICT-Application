@@ -26,11 +26,11 @@ namespace WindowsFormsApplication1.Classes
         }
        
 
-        public Customer (string ID, string name, string AdditionalDetails)
+        public Customer (string _ID, string _name, string _AdditionalDetails)
         {
             this.ID = _ID;
             this.name = _name;
-            this.AdditionalDetails = AdditionalDetails;
+            this.AdditionalDetails = _AdditionalDetails;
             
         }
     }
